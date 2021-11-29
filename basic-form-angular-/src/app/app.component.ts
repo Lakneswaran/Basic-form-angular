@@ -7,4 +7,21 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'basic-form-angular';
+  langs: string[] = [
+    'HTML',
+    'JSS',
+    'CSS',
+    'PHP',
+    'Java'
+  ];
+
+  states: string[] = [
+    'Antwerpen',
+    'Brugge',
+    'Brussel',
+    'Not in list'
+  ];
+
 }
+
+

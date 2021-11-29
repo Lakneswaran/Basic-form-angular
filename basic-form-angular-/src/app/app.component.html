@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form novalidate action="_submit" method="post" accept-charset="utf-8"> 
+        <fieldset>
+            <div id="_fname" class="form-group">
+                <label class=control-label for="fname">First name:</label>
+                <input type="text" name="fname" id="fname" class="form-control">
+            </div>
+            <div id="_lname" class="form-group">
+                <label class=control-label for="lname">Last name:</label>
+                <input type="text" name="lname" id="lname" class="form-control">
+            </div>
+            <div id="_email" class="form-group">
+                <label class=control-label for="email">Email:</label>
+                <input type="email" name="email" id="email" autocorrect="off" autocapitalize="off" class="form-control">
+            </div>
+            <div id="_city" class="form-group">
+                <label class=control-label for="city">City:</label>
+                <input type="text" name="city" id="city" class="form-control">
+            </div>
+            <div id="_state" class="form-group">
+                <label class=control-label for="state">State:</label>
+                    <select name="state" id="state" class="form-control">
+                    <option value="" selected="selected">Select a State...</option>
+                    <option *ngFor="let state of states" 
+                            [value]="state">
+                            {{ state }}
+                    </option>
+
+                    <!-- <option value="AN">Antwerpen</option>
+                    <option value="BUR">Brussel</option>
+                    <option value="BR">Brugge</option>
+                    ...
+                    <option value="LB">Limburg</option>
+                    <option value="LU">Luven</option> -->
+                </select>
+            </div>
+            <div id="_zip" class="form-group">
+                <label class=control-label for="zip">Zip/Postal Code:</label>
+                <input type="text" name="zip" id="zip" class="form-control">
+            </div>
+            <div id="_language" class="form-group">
+                <label class=control-label for="country">Language:</label>
+                <select name="country" id="country" class="form-control">
+                    <option value="">Select a Language...</option>
+                    <option *ngFor="let lang of langs" 
+                            [value]="lang">
+                            {{ lang }}
+                    </option>
+                    <!-- <option value="HT" selected="selected">HTML </option> -->
+                    <!-- <option value="CS">CSS</option>
+                    <option value="JS">Java Script</option>
+                    <option value=" ">---------------</option>
+                    <option value="PHP">PHP </option>
+                    <option value="J">JAVA </option>
+                    ...
+                    <option value="ANG">Angular</option>
+                    <option value="RY">RUBY</option> -->
+                </select>
+            </div>
+            <label for="sex">What sex are you?</label>
+            <div id="_sex" class="radio">
+                <label for="male"><input type="radio" name="sex" value="male" id="male">Male</label>
+            </div>
+        
+            <div id="_sex" class="radio">
+                <label for="female"><input type="radio" name="sex" value="female" id="female">Female</label>
+            </div>
+            <div id="_comments" class="form-group">
+                <label class=control-label for="comments">Comments:</label>
+                <textarea name="comments" id="comments" class="form-control"></textarea>
+            </div>
+            <div id="_submit" class="form-group">
+                <input type="submit" name="submit" value="Submit" id="submit" class="btn">
+            </div>
+        </fieldset>
+        </form>
+       
+ 
+    
+</body>
+</html>
+
