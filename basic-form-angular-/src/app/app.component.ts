@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Friend } from './friend';
 
 @Component({
   selector: 'app-root',
@@ -22,6 +23,9 @@ export class AppComponent {
     'Not in list'
   ];
 
+ friendModel = new Friend("fname", "lname", "email", "city", "zip", "sex", "comments");
+
 }
+
 
 

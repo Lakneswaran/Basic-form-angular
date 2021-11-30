@@ -1,6 +1,9 @@
 .form-group{
     margin-bottom: 20px;
     float: center;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
 }
 
 .control-label{

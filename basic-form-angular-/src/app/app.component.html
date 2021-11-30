@@ -7,30 +7,31 @@
     <title>Document</title>
 </head>
 <body>
-    {{ formName.value | json }}
-
+    <pre>
+    {{ friendModel | json }}
+    </pre>
    
 
     <form novalidate action="_submit" method="post" accept-charset="utf-8" #formName="ngForm"> 
         <fieldset>
             <div id="_fname" class="form-group">
                 <label class=control-label for="fname">First name:</label>
-                <input type="text" name="fname" id="fname" class="form-control" #inputName="ngModel"ngModel>
+                <input type="text" name="fname" id="fname" class="form-control" [(ngModel)]="friendModel.fname">
                 
                 
             </div>
             <div id="_lname" class="form-group">
                 <label class=control-label for="lname">Last name:</label>
-                <input type="text" name="lname" id="lname" class="form-control" #inputName="ngModel"ngModel>
+                <input type="text" name="lname" id="lname" class="form-control" [(ngModel)]="friendModel.lname">
 
             </div>
             <div id="_email" class="form-group">
                 <label class=control-label for="email">Email:</label>
-                <input type="email" name="email" id="email" autocorrect="off" autocapitalize="off" class="form-control" #inputName="ngModel"ngModel>
+                <input type="email" name="email" id="email" autocorrect="off" autocapitalize="off" class="form-control" [(ngModel)]="friendModel.email">
             </div>
             <div id="_city" class="form-group">
                 <label class=control-label for="city">City:</label>
-                <input type="text" name="city" id="city" class="form-control" #inputName="ngModel"ngModel>
+                <input type="text" name="city" id="city" class="form-control" [(ngModel)]="friendModel.city">
             </div>
             <div id="_state" class="form-group">
                 <label class=control-label for="state">State:</label>
