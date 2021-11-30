@@ -1,0 +1,14 @@
+.form-group{
+    margin-bottom: 20px;
+    float: center;
+}
+
+.control-label{
+    /* float:right; */
+}
+
+
+.form-control{
+    padding-left: 30px;
+    margin-left: 50px;
+}
