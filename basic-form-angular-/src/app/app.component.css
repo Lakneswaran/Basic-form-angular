@@ -6,9 +6,7 @@
     flex-direction: column;
 }
 
-.control-label{
-    /* float:right; */
-}
+
 
 
 .form-control{
@@ -19,3 +17,8 @@
 .invalid  {
     border: 3px solid red;
   }
+
+#friendlist{
+    background-color: aqua;
+    text-align: center;
+}  

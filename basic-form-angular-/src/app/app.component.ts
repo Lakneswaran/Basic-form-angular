@@ -30,7 +30,7 @@ export class AppComponent {
     'Not in list'
   ];
 
- friendModel = new Friend("", "", "", "", "", "", "");
+ friendModel = new Friend("", "", "", "", "", "", "", "");
  dataSaved: any = [];
 
  ngOnInit(): void{

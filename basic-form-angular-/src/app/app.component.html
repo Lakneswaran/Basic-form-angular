@@ -13,6 +13,7 @@
     {{ friendModel | json }}
     </pre>
    
+    <h1 style="text-align: center; padding-bottom: 50px;">Fill the Form</h1>
 
     <form novalidate action="" #angularForm="ngForm" (ngSubmit)="trigger(angularForm)"> 
         <fieldset>
@@ -32,6 +33,12 @@
                 <input type="email" required ngModel name="email" id="email" autocorrect="off" autocapitalize="off" class="form-control" #email="ngModel" [class.invalid]="email.invalid && email.touched" [(ngModel)]="friendModel.email" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,4}$">
                 <div class="alert alert-danger" *ngIf="fname.touched && fname.invalid" >Email is required</div>
             </div>
+            <div id="_telefoon" class="form-group">
+                <label class=control-label for="telefoon">Telefoon:</label>
+                <input type="telefoon" required ngModel name="telefoon" id="telefoon" autocorrect="off" autocapitalize="off" class="form-control" #telefoon="ngModel" [class.invalid]="telefoon.invalid && telefoon.touched" [(ngModel)]="friendModel.telefoon" pattern="^\d{10}$">
+                <div class="alert alert-danger" *ngIf="telefoon.touched && telefoon.invalid" >Telefoon is required</div>
+            </div>
+
             <div id="_city" class="form-group">
                 <label class=control-label for="city">City:</label>
                 <input type="text" required ngModel  name="city" id="city" class="form-control" #city="ngModel" [class.invalid]="city.invalid && city.touched" [(ngModel)]="friendModel.city">
@@ -40,7 +47,7 @@
             <div id="_state" class="form-group">
                 <label class=control-label for="state">State:</label>
                     <select name="state" id="state" class="form-control">
-                    <option value="" selected="selected">Select a State...</option>
+                    <option value="default" selected="selected">Select a State...</option>
                     <option *ngFor="let state of states" 
                             [value]="state">
                             {{ state }}
@@ -53,11 +60,11 @@
                 <div class="alert alert-danger" *ngIf="fname.touched && fname.invalid" >Zip code is required</div>
             </div>
             <div id="_language" class="form-group">
-                <label class=control-label for="country">Language:</label>
-                <select name="country" id="country" class="form-control">
-                    <option value="">Select a Language...</option>
+                <label class=control-label for="language">Language:</label>
+                <select name="language" id="language" class="form-control">
+                    <option value="default">Select a Language...</option>
                     <option *ngFor="let lang of langs" 
-                            [value]="lang">
+                            value="{{ lang }}">
                             {{ lang }}
                             
                     </option>
@@ -81,7 +88,14 @@
         </fieldset>
         </form>
 
-        <div *ngFor = "let info of allFriends">{{ info.fname }}</div>
+        <div *ngFor = "let info of allFriends">{{ info.fname }} {{ info.lname}}<br> 
+            {{info.email}} <br>
+            {{info.telefoon}} <br>
+   <p>   {{ info.city}} &emsp; {{info.state}} &emsp; {{info.zip}}</p><br>
+            {{info.Language}}<br><br>
+            {{info.comments}}
+            
+        </div>
        
  
     
