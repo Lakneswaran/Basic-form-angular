@@ -15,3 +15,7 @@
     padding-left: 30px;
     margin-left: 50px;
 }
+
+.invalid  {
+    border: 3px solid red;
+  }

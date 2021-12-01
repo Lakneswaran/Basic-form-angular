@@ -1,14 +1,33 @@
-export class Friend {
-    constructor(
-       public fname:string,
-       public lname:string,
-       public email: string,
-       public city: string,
-       public zip: string,
-       public sex: string,
-       public comments: string      
-       
+import { HttpClient } from "@angular/common/http";
 
-      ){}
+export class Friend {
+    fname:string;
+    lname:string;
+    email: string;
+    city: string;
+    zip: string;
+    sex: string;
+    comments: string;
+    constructor(
+        fname:string,
+        lname:string,
+        email: string,
+        city: string,
+        zip: string,
+        sex: string,
+        comments: string      
+        
+       ){
+           this.fname = fname;
+           this.lname =lname;
+           this.email = email;
+            this.city = city;
+            this.zip = zip;
+            this.sex = sex;
+            this.comments = comments; 
+            
+           
+
+       }
 
 }

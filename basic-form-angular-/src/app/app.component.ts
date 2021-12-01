@@ -23,7 +23,10 @@ export class AppComponent {
     'Not in list'
   ];
 
- friendModel = new Friend("fname", "lname", "email", "city", "zip", "sex", "comments");
+ friendModel = new Friend("", "", "", "", "", "", "");
+ trigger(){
+   console.log(this.friendModel);
+ }
 
 }
 
