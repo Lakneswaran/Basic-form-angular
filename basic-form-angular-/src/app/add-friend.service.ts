@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Friend } from './friend';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -12,10 +13,14 @@ export class AddFriendService {
    }
 
    
-   var url = "";
-   addFriend(friend:Friend){
+    url = "http://localhost:9000/allFriends";
+    
+   addFriend(friend:Friend, url: string):Observable<any>{
 
-    this.http.post(this.url, { title: 'Angular POST Request Example' }).subscribe(data => {
-     })
+    return this.http.post(this.url, friend);
+   }
+
+   getFriend(url: string):Observable<any>{
+     return this.http.get(url);
    }
 }
