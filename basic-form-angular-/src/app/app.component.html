@@ -13,7 +13,7 @@
     </pre>
    
 
-    <form novalidate action="_submit" method="post" accept-charset="utf-8" #angularForm="ngForm"> 
+    <form novalidate action="_submit" method="post" accept-charset="utf-8" #angularForm="ngForm" (ngSubmit)="trigger()"> 
         <fieldset>
             <div id="_fname" class="form-group">
                 <label class=control-label for="fname">First name:</label>
